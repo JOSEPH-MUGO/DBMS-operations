@@ -1,0 +1,91 @@
+
+
+/*  body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    margin-bottom: 20px;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Headings */
+h1 {
+    color: #343a40;
+}
+
+/* Forms */
+form {
+    margin-top: 20px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Buttons */
+.btn {
+    margin-right: 10px;
+}
+
+/* Lists */
+ul.list-group {
+    list-style: none;
+    padding: 0;
+}
+
+ul.list-group li {
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+ul.list-group li:hover {
+    background-color: #f8f9fa;
+}
+
+/* Links inside lists */
+.list-group-item a {
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.list-group-item a.btn {
+    margin-left: 10px;
+}
+
+.list-group-item a.btn-info {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.list-group-item a.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}

@@ -1,0 +1,43 @@
+{% extends 'student/index.html' %}
+
+{% block content %}
+<div class="container">
+    <h2 class="mt-4">Student List</h2>
+    <a href="{% url 'create_student' %}" class="btn btn-success mt-3">Add Student</a>
+    <table class="table table-bordered mt-3">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Student Number</th>
+                <th>Name</th>
+                <th>Birthday</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ student.student_no }}</td>
+                <td>{{ student.name }}</td>
+                <td>{{ student.birthday }}</td>
+                <td>{{ student.email }}</td>
+                <td>
+                    <!-- Update and Delete Links -->
+                    <a href="{% url 'update_student' student.student_no %}" class="btn btn-sm btn-warning">Update</a>
+                    <form action="{% url 'delete_student' student.student_no %}" method="post" style="display:inline;">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6" class="text-center">No students found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
